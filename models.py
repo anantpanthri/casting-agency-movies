@@ -56,10 +56,11 @@ class Actor(db.Model):
         }
 
 
-Movie_Launch = db.Table('movie_launch', db.Model.metadata,
-                        db.Column('Movie_id', db.Integer, db.ForeignKey('movies.id')),
-                        db.Column('Actor_id', db.Integer, db.ForeignKey('actors.id')),
-                        db.Column('movie_budget', db.Float))
+Movie_Launch = db.Table(
+    'movie_launch', db.Model.metadata, db.Column(
+        'Movie_id', db.Integer, db.ForeignKey('movies.id')), db.Column(
+            'Actor_id', db.Integer, db.ForeignKey('actors.id')), db.Column(
+                'movie_budget', db.Float))
 
 
 class Movie(db.Model):
@@ -68,7 +69,12 @@ class Movie(db.Model):
     id = Column(Integer, primary_key=True)
     title = Column(String)
     release_date = Column(Date)
-    actors = db.relationship('Actor', secondary=Movie_Launch, backref=db.backref('movie_launch', lazy='joined'))
+    actors = db.relationship(
+        'Actor',
+        secondary=Movie_Launch,
+        backref=db.backref(
+            'movie_launch',
+            lazy='joined'))
 
     def __init__(self, title, release_date):
         self.title = title

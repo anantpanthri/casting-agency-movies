@@ -18,15 +18,20 @@ def create_app(test_config=None):
 
     @app.after_request
     def after_request(response):
-        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization,true')
-        response.headers.add('Access-Control-Allow-Methods', 'GET,PATCH,POST,DELETE,OPTIONS')
+        response.headers.add(
+            'Access-Control-Allow-Headers',
+            'Content-Type,Authorization,true')
+        response.headers.add(
+            'Access-Control-Allow-Methods',
+            'GET,PATCH,POST,DELETE,OPTIONS')
         return response
 
     def paginate_results(request, selection):
         page = request.args.get('page', 1, type=int)
         start = (page - 1) * PAGES
         end = start + PAGES
-        movie_or_actor_rows = [movie_actor.format() for movie_actor in selection]
+        movie_or_actor_rows = [movie_actor.format()
+                               for movie_actor in selection]
         return movie_or_actor_rows[start:end]
 
     @app.route('/health', methods=['GET'])

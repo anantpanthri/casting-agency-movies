@@ -26,7 +26,8 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.app = create_app()
         self.client = self.app.test_client
         self.database_name = "casting_agency"
-        self.database_path = "postgres://{}/{}".format('localhost:5432', self.database_name)
+        self.database_path = "postgres://{}/{}".format(
+            'localhost:5432', self.database_name)
         db_init(self.app)
         db_reboot()
         # binds the app to the current context
@@ -50,7 +51,9 @@ class CastingAgencyTestCase(unittest.TestCase):
             'name': 'Andy',
             'age': 29
         }
-        result = self.client().post('/actors', json=new_actor, headers=director_header)
+        result = self.client().post(
+            '/actors', json=new_actor, headers=director_header
+        )
         data = json.loads(result.data)
         self.assertEqual(result.status_code, 200)
         self.assertTrue(data['success'])
@@ -81,7 +84,9 @@ class CastingAgencyTestCase(unittest.TestCase):
 
     def test_404_errors(self):
         """actors not existing."""
-        result = self.client().get('/actors?page=99999', headers=assistant_header)
+        result = self.client().get(
+            '/actors?page=99999', headers=assistant_header
+        )
         data = json.loads(result.data)
         self.assertEqual(result.status_code, 404)
         self.assertFalse(data['success'])
@@ -138,7 +143,10 @@ class CastingAgencyTestCase(unittest.TestCase):
         actor_update = {
             'age': 30
         }
-        result = self.client().patch('/actors/1', json=actor_update, headers=director_header)
+        result = self.client().patch(
+            '/actors/1',
+            json=actor_update,
+            headers=director_header)
         data = json.loads(result.data)
         self.assertEqual(result.status_code, 200)
         self.assertTrue(data['success'])
@@ -156,7 +164,10 @@ class CastingAgencyTestCase(unittest.TestCase):
             'release_date': date.today()
         }
 
-        result = self.client().post('/movies', json=json_create_movie, headers=producer_header)
+        result = self.client().post(
+            '/movies',
+            json=json_create_movie,
+            headers=producer_header)
         data = json.loads(result.data)
         self.assertEqual(result.status_code, 200)
         self.assertTrue(data['success'])
@@ -166,7 +177,9 @@ class CastingAgencyTestCase(unittest.TestCase):
         movie_no_name = {
             'release_date': date.today()
         }
-        result = self.client().post('/movies', json=movie_no_name, headers=producer_header)
+        result = self.client().post(
+            '/movies', json=movie_no_name, headers=producer_header
+        )
         data = json.loads(result.data)
         self.assertEqual(result.status_code, 400)
         self.assertFalse(data['success'])
@@ -193,7 +206,9 @@ class CastingAgencyTestCase(unittest.TestCase):
 
     def test_error_movies_404(self):
         """Error GET movies."""
-        result = self.client().get('/movies?page=9999', headers=assistant_header)
+        result = self.client().get(
+            '/movies?page=9999', headers=assistant_header
+        )
         data = json.loads(result.data)
         self.assertEqual(result.status_code, 404)
         self.assertFalse(data['success'])
@@ -227,7 +242,9 @@ class CastingAgencyTestCase(unittest.TestCase):
         movie = {
             'release_date': date.today()
         }
-        result = self.client().patch('/movies/1', json=movie, headers=producer_header)
+        result = self.client().patch(
+            '/movies/1', json=movie, headers=producer_header
+        )
         data = json.loads(result.data)
         self.assertEqual(result.status_code, 200)
         self.assertTrue(data['success'])
@@ -238,7 +255,9 @@ class CastingAgencyTestCase(unittest.TestCase):
         movie = {
             'release_date': date.today()
         }
-        result = self.client().patch('/movies/9999', json=movie, headers=producer_header)
+        result = self.client().patch(
+            '/movies/9999', json=movie, headers=producer_header
+        )
         data = json.loads(result.data)
 
         self.assertEqual(result.status_code, 404)
@@ -253,5 +272,7 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.assertEqual(data['message'], 'bad request')
 
     '''run: python test_app.py to execute test cases'''
+
+
 if __name__ == "__main__":
     unittest.main()
