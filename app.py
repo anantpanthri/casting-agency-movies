@@ -13,7 +13,7 @@ def create_app(test_config=None):
     app = Flask(__name__)
     db_init(app)
     # uncomment the first time
-    db_reboot()
+    #db_reboot()
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     @app.after_request

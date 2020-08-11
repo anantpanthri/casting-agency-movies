@@ -16,7 +16,7 @@ def db_init(app):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
-    db.create_all()
+    # db.create_all()
 
 
 def db_reboot():
