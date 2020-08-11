@@ -16,7 +16,7 @@ def db_init(app):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
-    # uncomment the first time for local run
+    # uncomment the first time for run
     # db.create_all()
 
 
