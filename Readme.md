@@ -63,7 +63,8 @@ flask run --reload
 ### [Actors]
 The below endpoint will query all the actors in the database
 ##### End Point
- `http://localhost:5000/actors`
+ LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/actors`
+ local  `http://localhost:5000/actors`
 #### GET
 ```
 {
@@ -82,7 +83,8 @@ The below endpoint will query all the actors in the database
 The below endpoint will create an actor in the database
 
 ##### End Point
- `http://localhost:5000/actors`
+ LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/actors`
+ local `http://localhost:5000/actors`
 ##### POST
 ```
         {
@@ -99,10 +101,12 @@ The below endpoint will create an actor in the database
 }
 ```
 #### Update Actor
+
 The below endpoint will update an actor in the database
 
 ##### End Point
- `http://localhost:5000/actors/2`
+ LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/actors/2`
+ local `http://localhost:5000/actors/2`
 ##### PATCH
 ```
         {
@@ -131,7 +135,8 @@ The below endpoint will update an actor in the database
 The below endpoint will delete an actor in the database
 
 ##### End Point
- `http://localhost:5000/actors/2`
+LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/actors/2`
+local  `http://localhost:5000/actors/2`
 ##### DELETE
 ##### OUTPUT
 ```
@@ -146,7 +151,8 @@ The below endpoint will delete an actor in the database
 The below endpoint will query all the movies in the database
 
 ##### End Point
-`http://localhost:5000/movies`
+LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/movies`
+localhost `http://localhost:5000/movies`
 ##### Output
 ```
 {
@@ -164,7 +170,8 @@ The below endpoint will query all the movies in the database
 The below endpoint will create a movie in the database
 
 ##### End Point
- `http://localhost:5000/movies`
+LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/movies`
+localhost  `http://localhost:5000/movies`
 ##### POST
 ```
         {
@@ -183,7 +190,8 @@ The below endpoint will create a movie in the database
 The below endpoint will delete a movie in the database
 
 ##### End Point
- `http://localhost:5000/movies/7`
+LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/movies/7`
+localhost  `http://localhost:5000/movies/7`
 ##### DELETE
 ##### OUTPUT
 ```
@@ -197,7 +205,8 @@ The below endpoint will delete a movie in the database
 The below endpoint will update a movie in the database
 
 ##### End Point
- `http://localhost:5000/movies/10`
+LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/movies/10`
+localhost  `http://localhost:5000/movies/10`
 ##### PATCH
 ```
         {
