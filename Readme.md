@@ -316,3 +316,27 @@ https://fsnd007.us.auth0.com/authorize?audience=view_movies_actors&response_type
     - Add or delete a movie from the database
 ```
 
+<a name="deployment"></a>
+## Deployment
+1. Deployment was on heroku
+2. The app contains postgres sql initialized with some data
+3. The app is provided with an environment variable DATABASE_URL fetched from heroku
+4. db_reboot and db_create_all have been uncommented as the tables have been created
+```
+database_path = os.environ.get('DATABASE_URL')
+```
+3. to check the health of the app go on the browser
+```
+https://casting-agency-movies.herokuapp.com/health
+```
+
+Output
+```
+{
+    "health":"APP is up",
+    "success":true
+}
+```
+### URL
+ `https://casting-agency-movies.herokuapp.com/`
+ 
