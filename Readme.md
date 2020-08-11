@@ -118,9 +118,13 @@ The below endpoint will update an actor in the database
 
 ##### End Point
  LIVE URL endpoint 
- ```https://casting-agency-movies.herokuapp.com/actors/2```
+ ```
+ https://casting-agency-movies.herokuapp.com/actors/2
+```
  local 
- ```http://localhost:5000/actors/2```
+ ```
+ http://localhost:5000/actors/2
+```
 ##### PATCH
 ```
         {
@@ -150,9 +154,13 @@ The below endpoint will delete an actor in the database
 
 ##### End Point
 LIVE URL endpoint 
-```https://casting-agency-movies.herokuapp.com/actors/2```
+```
+https://casting-agency-movies.herokuapp.com/actors/2
+```
 local  
-```http://localhost:5000/actors/2```
+```
+http://localhost:5000/actors/2
+```
 ##### DELETE
 ##### OUTPUT
 ```
@@ -168,9 +176,13 @@ The below endpoint will query all the movies in the database
 
 ##### End Point
 LIVE URL endpoint 
-```https://casting-agency-movies.herokuapp.com/movies```
+```
+https://casting-agency-movies.herokuapp.com/movies
+```
 localhost 
-```http://localhost:5000/movies```
+```
+http://localhost:5000/movies
+```
 ##### Output
 ```
 {
@@ -189,9 +201,13 @@ The below endpoint will create a movie in the database
 
 ##### End Point
 LIVE URL endpoint 
-```https://casting-agency-movies.herokuapp.com/movies```
+```
+https://casting-agency-movies.herokuapp.com/movies
+```
 localhost  
-```http://localhost:5000/movies```
+```
+http://localhost:5000/movies
+```
 ##### POST
 ```
         {
@@ -211,9 +227,13 @@ The below endpoint will delete a movie in the database
 
 ##### End Point
 LIVE URL endpoint 
-```https://casting-agency-movies.herokuapp.com/movies/7```
+```
+https://casting-agency-movies.herokuapp.com/movies/7
+```
 localhost  
-```http://localhost:5000/movies/7```
+```
+http://localhost:5000/movies/7
+```
 ##### DELETE
 ##### OUTPUT
 ```
@@ -228,9 +248,13 @@ The below endpoint will update a movie in the database
 
 ##### End Point
 LIVE URL endpoint 
-```https://casting-agency-movies.herokuapp.com/movies/10```
+```
+https://casting-agency-movies.herokuapp.com/movies/10
+```
 localhost  
-```http://localhost:5000/movies/10```
+```
+http://localhost:5000/movies/10
+```
 ##### PATCH
 ```
         {
