@@ -63,8 +63,14 @@ flask run --reload
 ### [Actors]
 The below endpoint will query all the actors in the database
 ##### End Point
- LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/actors`
- local  `http://localhost:5000/actors`
+ LIVE URL endpoint 
+ ```
+ https://casting-agency-movies.herokuapp.com/actors
+```
+ local  
+ ```
+ http://localhost:5000/actors
+```
 #### GET
 ```
 {
@@ -83,8 +89,10 @@ The below endpoint will query all the actors in the database
 The below endpoint will create an actor in the database
 
 ##### End Point
- LIVE URL endpoint `https://casting-agency-movies.herokuapp.com/actors`
- local `http://localhost:5000/actors`
+ LIVE URL endpoint 
+ ```https://casting-agency-movies.herokuapp.com/actors```
+ local 
+ ```http://localhost:5000/actors```
 ##### POST
 ```
         {
@@ -267,3 +275,4 @@ https://fsnd007.us.auth0.com/authorize?audience=view_movies_actors&response_type
     - All permissions a Casting Director has and…
     - Add or delete a movie from the database
 ```
+
