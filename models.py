@@ -3,9 +3,10 @@ from sqlalchemy import Column, String, Integer, create_engine, Date, Float
 from flask_sqlalchemy import SQLAlchemy
 import json
 from datetime import date
+from config import database_name, database_path
 
-database_name = "casting_agency"
-database_path = "postgres://{}/{}".format('localhost:5432', database_name)
+database_name = database_name
+database_path = database_path
 
 db = SQLAlchemy()
 
